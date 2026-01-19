@@ -13,13 +13,16 @@ export default function GriddWebsite() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-3">
-              <Image 
-                src="/images/logo.png" 
-                alt="Gym Gridd Logo" 
-                width={40} 
-                height={40} 
-                className="object-contain"
-              />
+              <div className="relative w-10 h-10">
+                <Image 
+                  src="/images/logo.png" 
+                  alt="Gym Gridd Logo" 
+                  width={40} 
+                  height={40} 
+                  className="object-contain"
+                  style={{ display: 'block' }}
+                />
+              </div>
               <span className="text-2xl font-bold text-[#FFD166]">Gym Gridd</span>
             </Link>
             <div className="hidden md:flex items-center space-x-8">
@@ -204,13 +207,16 @@ export default function GriddWebsite() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Image 
-                  src="/images/logo.png" 
-                  alt="Gym Gridd Logo" 
-                  width={28} 
-                  height={28} 
-                  className="object-contain"
-                />
+                <div className="relative w-7 h-7">
+                  <Image 
+                    src="/images/logo.png" 
+                    alt="Gym Gridd Logo" 
+                    width={28} 
+                    height={28} 
+                    className="object-contain"
+                    style={{ display: 'block' }}
+                  />
+                </div>
                 <span className="text-xl font-bold text-[#FFD166]">Gym Gridd</span>
               </div>
               <p className="text-sm text-[#ccc]">
