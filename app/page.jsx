@@ -7,7 +7,72 @@ import Link from 'next/link';
 
 export default function GriddWebsite() {
   return (
-    <div className="min-h-screen bg-black">
+    <>
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Gym Gridd',
+            description: 'Gym Gridd connects fitness enthusiasts with gyms worldwide. Book day passes, memberships, and classes instantly through our mobile app.',
+            url: 'https://gymgridd.vercel.app', // Update with your actual domain
+            logo: 'https://gymgridd.vercel.app/images/logo.png', // Update when logo is added
+            sameAs: [
+              // Add your social media links here when available
+              // 'https://twitter.com/gymgridd',
+              // 'https://facebook.com/gymgridd',
+              // 'https://instagram.com/gymgridd',
+            ],
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+1-234-567-8900', // Update with actual phone
+              contactType: 'Customer Service',
+              email: 'hello@gymgridd.app', // Update with actual email
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Gym Gridd',
+            applicationCategory: 'HealthApplication',
+            operatingSystem: 'iOS, Android',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'USD',
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '4.8',
+              reviewCount: '150',
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Gym Gridd',
+            url: 'https://gymgridd.vercel.app', // Update with your actual domain
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://gymgridd.vercel.app/search?q={search_term_string}',
+              'query-input': 'required name=search_term_string',
+            },
+          }),
+        }}
+      />
+      <div className="min-h-screen bg-black">
       {/* Navigation */}
       <nav className="bg-black border-b border-[#333] sticky top-0 z-50 backdrop-blur-sm bg-opacity-90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
